@@ -18,6 +18,9 @@ body {
  overflow: hidden;
 */
 
+html{
+  zoom: 90%;
+}
 
 #homebody{
   background-image: url('../img/transpagefloatingpoint.mp4');
@@ -92,8 +95,8 @@ body {
   h1{
     font-family: Jura, sans-serif;
     text-align: center;
-    color: #535353;
-    font-size: 165px;
+    color: #414141;
+    font-size: 200px;
     animation: vertical-shaking 8.5s infinite;
   }
 
@@ -102,7 +105,6 @@ body {
     color: #535353;
     font-size: 64px;
     text-align: center;
-
   }
 
 

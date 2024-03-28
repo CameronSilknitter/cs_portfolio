@@ -18,6 +18,9 @@ body {
  overflow: hidden;
 */
 
+html{
+  zoom: 90%;
+}
 
 #homebody{
   background-image: url('../img/transpagefloatingpoint.mp4');
@@ -110,7 +113,6 @@ body {
     text-align: center;
 
   }
-
 
 /* Begin Carousel Styles */
 
