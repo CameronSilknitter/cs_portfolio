@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap');
+*
+
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Jura, sans-serif;
+}
+
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: transparent;
+    background-image: url('../img/transpagefloatingpoint.mp4');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+    padding: 50px 20px;
+    overflow: visible;
+  }
+  
+  .swiper .swiper-wrapper {
+    align-items: center;
+  }
+  
+  .swiper .swiper-slide {
+    position: relative;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: rgba(102, 102, 102, 0.8);
+    border-radius: 25px;
+    padding: 10px;
+    margin: 0;
+    cursor: grab;
+    user-select: none;
+    text-wrap: pretty;
+  }
+  
+  .swiper .swiper-slide::before {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 80px;
+    height: 80px;
+    border-bottom: 1px dashed white;
+    border-right: 1px solid white;
+    border-radius: 6em 6em 6em 6em;
+    content: "";
+    transition: all 0.3s ease;
+  }
+  
+  .swiper .swiper-slide::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 80px;
+    border-top: 1px solid white;
+    border-left: 1px dashed white;
+    border-radius: 7px 0 0 0;
+    content: "";
+    transition: all 0.3s ease;
+  }
+
+.container
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    z-index: 1;
+    animation: tilt-n-move-shaking 11s infinite;
+}
+
+.container .card
+{
+    position: relative;
+    width: 280px;
+    height: 305px;
+    margin: 30px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+.container .card .content
+{
+    padding: 15px;
+    text-align: center;
+}
+
+/* Disabled Optional "Fly-Up" Content Effect
+.container .card .content
+{
+    padding: 15px;
+    text-align: center;
+    transform: translateY(100px);
+    opacity: 20%;
+    transition: 0.5s;
+}
+*/
+
+.container .card .content img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 25px;
+    border-radius: 18px 18px 0px 0px;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+  }
+
+.container .card:hover .content
+{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.container .card .content h2
+{
+    position: center;
+    font-size: 3em;
+    padding-bottom: 9px;
+    color: whitesmoke;
+    pointer-events: none;
+}
+
+.container .card .content h3
+{
+    font-size: 1.8em;
+    color: rgba(255, 255, 255, 0.05)
+    z-index: 1;
+}
+
+.container .card .content p
+{
+    font-size: 1em;
+    color: whitesmoke;
+    font-weight: 300;
+}
+
+.container .card .content a
+{
+    position: center;
+    font-size: 3em;
+    font-weight: 700;
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+/* Disabled Optional Link Button Format
+.container .card .content a
+{
+    position: relative;
+    display: inline-block;
+    padding: 5px 20px;
+    margin-top: 10px;
+    background: whitesmoke;
+    color: black;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+*/
+
+body { font-family: sans-serif; }
+
+div {
+  text-align: center;
+}
+
+@keyframes tilt-shaking {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(5deg); }
+    50% { transform: rotate(0eg); }
+    75% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+}
+
+@keyframes tilt-n-move-shaking {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(15px, 15px) rotate(5deg); }
+  50% { transform: translate(0, 0) rotate(0deg); }
+  75% { transform: translate(-15px, 15px) rotate(-5deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+/* Will be used for Page Titles */
+@keyframes vertical-shaking {
+  0% { transform: translateY(0) }
+  25% { transform: translateY(5px) }
+  50% { transform: translateY(-5px) }
+  75% { transform: translateY(5px) }
+  100% { transform: translateY(0) }
+}
+
