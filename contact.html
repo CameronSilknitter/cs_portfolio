@@ -11,6 +11,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Nabla:EHLT@24&display=swap" rel="stylesheet"><link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css'><link rel="stylesheet" href="./css/carousel.css">
     <link href="css/carousel.css" rel="stylesheet">
      <link rel="stylesheet" href="css/carousel.css">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap" rel="stylesheet">
   </head>
 
   <body id="homebody">
@@ -19,14 +22,14 @@
       <header id="homepage">
       
         <button>
-        <img src="../portfolio_site-main/img/Back Button.png">
+        <img src="img/Back Button.png">
         </button>
     
         <nav>
           <ul>
-            <li><a href="../portfolio_site-main/carousel.html">Home</a></li>
-            <li><a href="carousel about.html">About</a></li>
-            <li><a href="carousel work.html">Work</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="work.html">Work</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </nav>
@@ -36,8 +39,18 @@
       <section>
     <h1>Contact</h1>
 
-    <p>This is where my website will deviate from the Figma protoype. I will apply a contact form here instead.</p>
-    <link href='https://fonts.googleapis.com/css?family=Jura' rel='stylesheet'>
+
+<div class="contactform">
+    <form action="/action_page.php">
+      <label for="fname">First name:</label><br>
+      <input type="text" id="fname" name="fname" value="John"><br>
+      <label for="lname">Last name:</label><br>
+      <input type="text" id="lname" name="lname" value="Doe"><br>
+      <label for="email">Email:</label><br>
+      <input type="text" id="email" name="email" value="Email"><br><br>
+      <input type="submit" value="Submit">
+    </form> 
+  </div>
 
 	<script src="js/index.js"></script> 
   </body>
