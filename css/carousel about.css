@@ -63,6 +63,11 @@ html{
     animation: vertical-shaking 18s infinite;
   }
 
+  button.navbutton {
+    background: none;
+    border: none;
+  }
+
   nav ul{
     display: flex;
     justify-content: space-between;
