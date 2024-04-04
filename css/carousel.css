@@ -55,6 +55,13 @@ html{
     animation: vertical-shaking 18s infinite;
   }
 
+  @media screen and (max-width: 430px) {
+
+    h1{
+      font-size: 30px;
+    }
+  }
+
   nav{
     position: relative;
     display: flex;
