@@ -58,7 +58,7 @@ class VanillaTilt {
     this.addEventListeners();
     this.reset();
 
-    if (this.resetToStart === false) {
+    if (this.resetToStart ==="true") {
       this.settings.startX = 0;
       this.settings.startY = 0;
     }
@@ -102,6 +102,7 @@ class VanillaTilt {
     this.onMouseLeaveBind = this.onMouseLeave.bind(this);
     this.onWindowResizeBind = this.onWindowResize.bind(this);
     this.onDeviceOrientationBind = this.onDeviceOrientation.bind(this);
+    this.onMouseEnter = "../wav/panelhovOn.wav"
 
     this.elementListener.addEventListener("mouseenter", this.onMouseEnterBind);
     this.elementListener.addEventListener("mouseleave", this.onMouseLeaveBind);
@@ -422,7 +423,7 @@ mouseEventElement
    */
   extendSettings(settings) {
     let defaultSettings = {
-      reverse: false,
+      reverse: true,
       max: 15,
       startX: 0,
       startY: 0,
@@ -432,11 +433,11 @@ mouseEventElement
       speed: 300,
       transition: true,
       axis: null,
-      glare: false,
-      "max-glare": 1,
+      glare: true,
+      "max-glare": 0.7,
       "glare-prerender": false,
       "full-page-listening": false,
-      "mouse-event-element": null,
+      "mouse-event-element": true,
       reset: true,
       "reset-to-start": true,
       gyroscope: true,

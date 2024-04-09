@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap');
 
 *:not(style, head),
 *::before,
@@ -55,17 +55,42 @@ html{
     animation: vertical-shaking 18s infinite;
   }
 
+  @media screen and (max-width: 430px) {
+
+    h1{
+      font-size: 30px;
+    }
+  }
+
   nav{
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 40%;
+    background: none;
+    border-radius: 50%;
     animation: vertical-shaking 18s infinite;
+    transition: 0.5%;
   }
 
   button.navbutton {
     background: none;
     border: none;
+  }
+
+  nav .toggleMenu{
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: none;
+  transition: 0.5s;
+  cursor: pointer;
+  }
+
+  nav.active .toggleMenu{
+  background: none;
   }
 
   nav ul{
@@ -90,7 +115,7 @@ html{
   nav ul li a{
     font-family: "Jura", sans-serif;
     font-size: 1.2rem;
-    color: #fff;
+    color: white;
     text-decoration: none;
   }
 
@@ -98,26 +123,19 @@ html{
 
   h1{
     font-family: Jura, sans-serif;
-    text-align: left;
-    padding-left: 5cm;
-    color: #535353;
-    font-size: 165px;
+    text-align: center;
+    color: #414141;
+    font-size: 200px;
     animation: vertical-shaking 8.5s infinite;
-  }
-
-  h3{
-    font-family: Jura, sans-serif;
-    text-align: left;
-    color: #535353;
-    font-size: 28px;
   }
 
   p{
     font-family: Jura, sans-serif;
+    color: #535353;
     font-size: 64px;
     text-align: center;
-
   }
+
 
 /* Begin Carousel Styles */
 
@@ -128,8 +146,22 @@ body article {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  transform-style: preserve-3d
-  
+}
+
+.reflection {
+  width: 50px;
+  height: 333px;
+  position: relative;
+  background-color: #4F4F4F;
+}
+
+.reflection::after {
+  content: "";
+  background-color:inherit;
+  width:inherit;
+  height: inherit;
+  position: absolute;
+  bottom: -100%;
 }
 
 .sectionWrapper {
@@ -142,10 +174,10 @@ body article {
 }
 
 .swiper {
-  width: 100%;
+  width: 90vw;
   height: 100%;
-  padding: 50px 20px;
-  overflow: visible;
+  padding: 20px 20px;
+  overflow: hidden;
 }
 
 
@@ -160,7 +192,8 @@ body article {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  background-color: rgba(102, 102, 102, 0);
+  /* background-color: rgba(102, 102, 102, 0.8); */
+  background-color: transparent;
   border-radius: 25px;
   padding: 10px;
   margin: 0;
@@ -175,8 +208,6 @@ body article {
   right: 0;
   width: 80px;
   height: 80px;
-  border-bottom: 1px dashed white;
-  border-right: 1px solid white;
   border-radius: 6em 6em 6em 6em;
   content: "";
   transition: all 0.3s ease;
@@ -188,14 +219,12 @@ body article {
   left: 0;
   width: 80px;
   height: 80px;
-  border-top: 1px solid white;
-  border-left: 1px dashed white;
   border-radius: 7px 0 0 0;
   content: "";
   transition: all 0.3s ease;
 }
 
-.swiper .swiper-slide:hover {
+/* .swiper .swiper-slide:hover {
   background: linear-gradient(
     135deg,
     #ff1e9c99,
@@ -210,8 +239,9 @@ body article {
     #252aff99,
     #2641ff99,
     #2649ff99
+    
   );
-}
+} */
 
 .swiper .swiper-slide:hover::before,
 .swiper .swiper-slide:hover::after {
@@ -223,7 +253,11 @@ body article {
 .swiper .swiper-slide .cardPopout {
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(36, 36, 36, 0.475);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
   border-radius: 25px;
   padding: 20px;
   width: 100%;
@@ -232,8 +266,6 @@ body article {
   align-items: flex-start;
   justify-content: flex-start;
   animation: tilt-n-move-shaking 11s infinite;
-  transform: perspective(1000px); 
-  transform: translateZ(20px);
 }
 
 .swiper .swiper-slide img {
@@ -241,12 +273,10 @@ body article {
   height: auto;
   margin-bottom: 25px;
   border-radius: 25px;
-  transform: perspective(1000px); 
-  transform: translateZ(20px);
 }
 
 .swiper .swiper-slide h2 {
-  font-size: 200%;
+  font-size: 150%;
   line-height: 110%;
   margin: 0 0 7px 0;
   color: white;
@@ -277,11 +307,13 @@ body article {
 
 .swiper .swiper-slide figcaption p {
   color: #999;
+  font-weight: 700;
   margin: 0;
   display: -webkit-box;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  font-size: 40px;
 }
 
 .swiper .swiper-slide a {
@@ -338,6 +370,38 @@ body article {
 .swiper .swiper-scrollbar {
   --swiper-scrollbar-bottom: 0px;
   --swiper-scrollbar-size: 10px;
+}
+
+.swiper img {
+  -webkit-box-reflect: below 450px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
+}
+
+/* Contact Page */
+
+.contactform{
+  scale: 100%;
+  width: 30vw;
+  height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 1rem;
+    box-shadow: 0px 4px 4px #535353;
+    filter: blur(0.55px);
+    outline-width: 1px;
+    outline-style: solid;
+    outline-color: white;
+    border-radius: 2em;
+    background-color: #4F4F4F;
+    background-image: linear-gradient(#535353, #868686);
+}
+
+input{
+  height: 65px;
+  width: 350px;
+  border-radius: 15px;
 }
 
 @media (max-height: 550px) {
@@ -397,3 +461,4 @@ body article {
 50% { transform: translateY(-15px) }
 75% { transform: translateY(15px) }
 100% { transform: translateY(0) }
+}
