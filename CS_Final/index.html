@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+  <audio autoplay loop src="wav/purpbg.wav"></audio>
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +19,9 @@
     </header>
 
     <div id="navbar">
-      <div id="menu_logo">-</div>
+      <div id="menu_logo">
+      <img src="img/Back Button.png" />
+    </div>
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -103,5 +106,13 @@
     $('#ca-container').contentcarousel();
   </script>
     <script src="js/script.js"></script>
+    <script src='https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js'></script><script  src="./js/carousel.js"></script>
+    <script type="text/javascript" src="../CS_Final/js/vanilla-tilt.js"></script>
+    <script type="text/javascript">
+        VanillaTilt.init(document.querySelector(".ca-item-main"), {
+            max: 25,
+            speed: 400
+        });
+  </script>
   </body>
 </html>
