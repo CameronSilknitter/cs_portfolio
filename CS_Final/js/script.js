@@ -1,18 +1,30 @@
 // Begin JS
 
-// Navbar
 
-$( "#menu_logo" ).click(
-    function() {
-      if ($("#navbar").hasClass("clickHide")) {
-        $("#navbar").removeClass("clickHide");
-        $("#menu_logo").html("←");
-      }
-      else {
-        $("#navbar").addClass("clickHide");
-        $("#menu_logo").html("&#9776;");
-      }
-  });
+// New Navbar
+
+// Get the menu logo and navbar elements
+const menuLogo = document.getElementById('menu_logo');
+const navbar = document.getElementById('navbar');
+
+// Define the open and close images
+const openImage = '../img/Hamburger Icon.png';
+const closeImage = '../img/Back Button.png';
+
+// Add a click event listener to the menu logo
+menuLogo.addEventListener('click', function() {
+  // Toggle the 'clickHide' class on the navbar
+  navbar.classList.toggle('clickHide');
+
+  // Update the menu logo image based on the navbar's state
+  if (navbar.classList.contains('clickHide')) {
+    menuLogo.src = openImage;
+  } else {
+    menuLogo.src = closeImage;
+  }
+});
+
+
 
 
 // Carousel
